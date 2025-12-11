@@ -1,0 +1,46 @@
+<div class="center-wrapper">
+
+    <h2>📄 Patients Document Manager</h2>
+
+    <!-- Upload Section -->
+    <div>
+      <input type="file" (change)="onFileSelected($event)">
+      <button (click)="upload()">Upload</button>
+    </div>
+    
+    <hr>
+    
+    <!-- List Section -->
+    <table border="1" cellpadding="10">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Filename</th>
+          <th>Size (KB)</th>
+          <th>Created At</th>
+          <th>Download</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <tr *ngFor="let doc of documents">
+          <td>{{ doc.id }}</td>
+          <td>{{ doc.filename }}</td>
+          <td>{{ doc.size }} KB</td>
+          <td>{{ doc.createdAt | date:'short' }}</td>
+    
+          <td>
+            <button (click)="download(doc.filename)">⬇ Download</button>
+          </td>
+    
+          <td>
+            <button style="color:red" (click)="delete(doc.id)">🗑 Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+
+</div>
+

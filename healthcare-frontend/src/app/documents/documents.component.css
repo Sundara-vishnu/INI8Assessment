@@ -1,0 +1,25 @@
+.center-wrapper {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  table {
+    margin: auto;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    border: 2px solid #000000 ;
+  }
+
+  /* :host {
+    font-size: 30px;   
+  } */
+
+  table {
+    font-size: 18px;
+  }
+  
+  
